@@ -1,0 +1,49 @@
+---
+title: "Probabilidades"
+output: html_document
+date: "2023-01-09"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Esse código simula uma sequência de lançamentos de uma moeda onde a probabilidade de sair "cara" é dada por p. Ele realiza nsim lançamentos, armazena o resultado de cada lançamento em uma lista chamada saida e, no final, imprime essa lista e a frequência de "caras" obtidas.
+
+**Exemplo em Python**
+
+```{python}
+import numpy as np
+p = 0.6 # probabilidade de sair cara
+nsim = 10 # num de experimentos
+nhead = 0 # num de caras obtidas
+saida = [] # armazena as saidas (cara:1, coroa:0)
+for i in range(0, nsim):
+    if(np.random.uniform() < p): # se menor que p, cara
+        nhead = nhead + 1 # incrementa o contador de caras
+        saida.append(1)
+    else:
+        saida.append(0)
+print("Saida:", saida)
+print("Frequencia de caras:", nhead/nsim)
+```
+
+**Exemplo em R**
+
+```{r}
+p <- 0.6 # probabilidade de sair cara
+nsim <- 10 # num de experimentos
+nhead <- 0 # num de caras obtidas
+saida <- c() # armazena as saidas (cara:1, coroa:0)
+for (i in 1:nsim) {
+  if (runif(1) < p) { # se menor que p, cara
+    nhead <- nhead + 1 # incrementa o contador de caras
+    saida <- c(saida, 1)
+  } else {
+    saida <- c(saida, 0)
+  }
+}
+print(paste((saida)))
+print(paste("Frequencia de caras:", nhead/nsim))
+
+```
