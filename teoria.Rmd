@@ -1,0 +1,58 @@
+---
+title: "basico"
+output: html_document
+date: "2023-01-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Permutação**
+
+Definiççao
+
+Uma permutação de $n$ objetos distintos é qualquer agrupamento ordenado desses objetos, de modo que, se denominarmos $P_n$  o número das permutações simples dos n objetos, então:
+
+$$P_n=n(n-1)~(n-2)...n$$
+Define-se $P_0=0!=1$
+
+**Exemplo:** Considerando os dígitos 1, 2, 3, 4 e 5, quantos números de 2 algarismos distintos podem ser formados? 
+
+**R:**   Os números de 2 algarismos têm o algarismo das unidades e o algarismo das dezenas. Pode- se dizer então que existem 2 posições para serem preenchidas, P1 e P2. A posição P1 pode ser preenchida de 5 maneiras diferentes, restando, portanto, 4 dígitos que podem ocupar a posição P2. Então há $5 \cdot 4 = 20$ maneiras diferentes das posições P1 e P2 serem ocupadas, isto é, há 20 números de 2 algarismos distintos que podem ser formados com os 5 dígitos. 
+
+**Arranjo**
+
+Arranjo é uma forma de organizar elementos de um conjunto de maneira ordenada. Em matemática combinatória, arranjo é a seleção de um subconjunto ordenado de elementos de um conjunto.
+
+Existem dois tipos de arranjos: simples e com repetição. O arranjo simples é quando não é permitido escolher o mesmo elemento mais de uma vez, enquanto o arranjo com repetição é quando é permitido escolher o mesmo elemento mais de uma vez.
+
+A fórmula para o arranjo simples é dada por $A = \frac {n!} {(n-k)!}$, onde A é o arranjo simples, n é o número total de elementos e k é o número de elementos escolhidos.
+
+Para o arranjamento com repetição a fórmula é dada por $A = (n+k-1)!$, onde A é o arranjo com repetição, n é o número total de elementos e k é o número de elementos escolhidos.
+
+Em resumo, arranjamento é uma forma de selecionar elementos de um conjunto e organizá-los ordenadamente e existem duas variações, simples e com repetição, cada uma com sua própria fórmula.
+
+
+**Combinação**
+
+A fórmula para calcular o número de combinações é dada por:
+$${n \choose k} = \binom{n}{k} = \frac{n!}{(n-k)!\cdot  k!}$$
+
+Onde C é o número de combinações, n é o número total de elementos e k é o número de elementos escolhidos.
+
+A combinação é uma seleção de elementos de um conjunto sem levar em conta a ordem em que eles foram escolhidos. Diferentemente do arranjo, onde a ordem importa, na combinação, a ordem não importa.
+
+Por exemplo, se você quiser saber quantas formas diferentes existem para escolher 3 bolas de um conjunto de 5 bolas vermelhas, 4 bolas azuis e 3 bolas verdes sem importar a ordem em que as bolas são escolhidas, a fórmula seria C = (12! / (3! 9!) = 220.
+
+É importante notar que a combinação é diferente de combinação com repetição, onde é permitido escolher o mesmo elemento mais de uma vez.
+
+
+
+
+
+
+
+
+
+
